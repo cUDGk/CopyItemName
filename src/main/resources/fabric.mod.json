@@ -1,0 +1,29 @@
+{
+    "schemaVersion": 1,
+    "id": "copyitemname",
+    "version": "${version}",
+    "name": "Copy Item Name",
+    "description": "Middle-click items in inventory to copy their English name to clipboard.",
+    "authors": ["cUDGk"],
+    "contact": {},
+    "license": "MIT",
+    "icon": "assets/copyitemname/icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "com.copyitemname.CopyItemNameMod"
+        ],
+        "modmenu": [
+            "com.copyitemname.ModMenuIntegration"
+        ]
+    },
+    "mixins": [
+        "copyitemname.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.18.0",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
