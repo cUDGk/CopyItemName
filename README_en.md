@@ -43,7 +43,7 @@ When playing Minecraft in a non-English language, you often need item names in E
 ## Installation
 
 1. Install [Fabric Loader](https://fabricmc.net/use/)
-2. Download `.jar` from [Releases](../../releases)
+2. Download [`copy-item-name-1.0.0.jar`](https://github.com/cUDGk/CopyItemName/releases/download/v1.0.0/copy-item-name-1.0.0.jar)
 3. Place in `.minecraft/mods/` and launch
 
 ## Usage

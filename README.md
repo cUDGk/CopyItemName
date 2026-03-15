@@ -58,7 +58,7 @@
 ## Installation
 
 1. [Fabric Loader](https://fabricmc.net/use/) をインストール
-2. [Releases](../../releases) から `.jar` をダウンロード
+2. [`copy-item-name-1.0.0.jar`](https://github.com/cUDGk/CopyItemName/releases/download/v1.0.0/copy-item-name-1.0.0.jar) をダウンロード
 3. `.minecraft/mods/` に配置して起動
 
 ### ビルドする場合
