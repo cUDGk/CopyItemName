@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fabric
+run/
+net/
+remappedSrc/
+
+# Mod output
+*.jar
