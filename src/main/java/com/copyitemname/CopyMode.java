@@ -2,7 +2,8 @@ package com.copyitemname;
 
 public enum CopyMode {
     ENGLISH_NAME("English Name", "英語名"),
-    ITEM_ID("Item ID", "アイテムID");
+    ITEM_ID("Item ID", "アイテムID"),
+    COMPONENT("Component", "コンポーネント");
 
     public final String english;
     public final String japanese;

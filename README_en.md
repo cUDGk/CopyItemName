@@ -26,7 +26,7 @@ When playing Minecraft in a non-English language, you often need item names in E
 | Feature | Description |
 |:---:|---|
 | **Middle-click to Copy** | Just press the mouse wheel button on any item in inventory |
-| **Two Modes** | Switch between `English Name` and `Item ID` (`minecraft:trident` format) |
+| **Three Modes** | Switch between `English Name`, `Item ID` (`minecraft:trident`), and `Component` (full component data) |
 | **Enchanted Book Support** | Copies all enchantment names with levels (e.g., `Sharpness V, Unbreaking III`) |
 | **ModMenu Integration** | Toggle modes from the in-game settings screen |
 | **Action Bar Notification** | Shows a confirmation message when copied |
@@ -61,6 +61,7 @@ With ModMenu installed: `Mods` → `Copy Item Name` → Settings button.
 |:---:|---|---|
 | **English Name** | Item's English display name | `Trident` |
 | **Item ID** | Namespaced item ID | `minecraft:trident` |
+| **Component** | Item ID + component data | `minecraft:trident[enchantments={...}]` |
 
 ## License
 
