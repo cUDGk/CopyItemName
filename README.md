@@ -26,7 +26,7 @@
 | 機能 | 説明 |
 |:---:|---|
 | **ミドルクリックでコピー** | インベントリ画面でマウスホイールクリックするだけ |
-| **2つのモード** | `English Name`（英語名）と `Item ID`（`minecraft:trident` 形式）を切り替え可能 |
+| **3つのモード** | `English Name`（英語名）、`Item ID`（`minecraft:trident` 形式）、`Component`（コンポーネントデータ）を切り替え可能 |
 | **エンチャント本対応** | エンチャント名 + レベルをまとめてコピー（例: `Sharpness V, Unbreaking III`） |
 | **ModMenu対応** | ゲーム内の設定画面からモード切り替え |
 | **アクションバー通知** | コピー完了時に画面下部にメッセージ表示 |
@@ -43,7 +43,11 @@
 → クリップボード: "minecraft:diamond_sword"
 → アクションバー: "Copied: [ID] minecraft:diamond_sword"
 
-[エンチャント本をミドルクリック]
+[モードをComponentに切り替えてミドルクリック]
+→ クリップボード: "minecraft:diamond_sword[enchantments={...}]"
+→ アクションバー: "Copied: [Component] minecraft:diamond_sword[...]"
+
+[エンチャント本をミドルクリック（English Nameモード）]
 → クリップボード: "Sharpness V, Unbreaking III"
 ```
 
@@ -86,6 +90,7 @@ ModMenu がインストールされている場合、`Mods` → `Copy Item Name`
 |:---:|---|---|
 | **English Name** | アイテムの英語名 | `Trident` |
 | **Item ID** | アイテムの名前空間ID | `minecraft:trident` |
+| **Component** | アイテムID + コンポーネントデータ | `minecraft:trident[enchantments={...}]` |
 
 ## How It Works
 
@@ -96,6 +101,7 @@ ModMenu がインストールされている場合、`Mods` → `Copy Item Name`
     ↓
 モード判定
     ├─ ITEM_ID → Registries からID取得
+    ├─ COMPONENT → アイテムID + ComponentMap を文字列化
     └─ ENGLISH_NAME
          ├─ 通常アイテム → en_us.json から翻訳キーで英語名取得
          └─ エンチャント本 → 各エンチャント名 + レベルを結合

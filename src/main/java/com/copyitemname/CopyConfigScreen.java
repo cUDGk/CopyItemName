@@ -66,6 +66,9 @@ public class CopyConfigScreen extends Screen {
         context.drawCenteredTextWithShadow(textRenderer,
                 "\u00a78\u00a7oItem ID: minecraft:trident, minecraft:diamond_sword ...",
                 centerX, descY + 12, 0x666666);
+        context.drawCenteredTextWithShadow(textRenderer,
+                "\u00a78\u00a7oComponent: minecraft:trident[enchantments={...}] ...",
+                centerX, descY + 24, 0x666666);
 
         super.render(context, mouseX, mouseY, delta);
     }
@@ -74,6 +77,7 @@ public class CopyConfigScreen extends Screen {
         String label = switch (config.copyMode) {
             case ENGLISH_NAME -> "\u00a7e\u00a7l English Name \u00a77(Trident)";
             case ITEM_ID -> "\u00a7b\u00a7l Item ID \u00a77(minecraft:trident)";
+            case COMPONENT -> "\u00a7d\u00a7l Component \u00a77(minecraft:trident[...])";
         };
         return Text.literal(label);
     }

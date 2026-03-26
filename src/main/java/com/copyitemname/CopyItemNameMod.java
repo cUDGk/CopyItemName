@@ -12,6 +12,7 @@ import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.component.ComponentMap;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.resource.ResourceManager;
@@ -52,6 +53,9 @@ public class CopyItemNameMod implements ClientModInitializer {
                             if (config.copyMode == CopyMode.ITEM_ID) {
                                 // Copy the item ID (e.g. "minecraft:trident")
                                 copied = Registries.ITEM.getId(stack.getItem()).toString();
+                            } else if (config.copyMode == CopyMode.COMPONENT) {
+                                // Copy the component data
+                                copied = getComponentString(stack);
                             } else {
                                 // Copy the English name
                                 if (stack.isOf(Items.ENCHANTED_BOOK)) {
@@ -64,8 +68,11 @@ public class CopyItemNameMod implements ClientModInitializer {
 
                             client.keyboard.setClipboard(copied);
                             if (client.player != null) {
-                                String modeTag = config.copyMode == CopyMode.ITEM_ID
-                                        ? "\u00a7b[ID] " : "\u00a7e[Name] ";
+                                String modeTag = switch (config.copyMode) {
+                                    case ITEM_ID -> "\u00a7b[ID] ";
+                                    case COMPONENT -> "\u00a7d[Component] ";
+                                    default -> "\u00a7e[Name] ";
+                                };
                                 client.player.sendMessage(
                                     Text.literal("\u00a7aCopied: " + modeTag + "\u00a7f" + copied), true
                                 );
@@ -76,6 +83,14 @@ public class CopyItemNameMod implements ClientModInitializer {
             }
         });
 
+    }
+
+    private static String getComponentString(ItemStack stack) {
+        ComponentMap components = stack.getComponents();
+        StringBuilder sb = new StringBuilder();
+        sb.append(Registries.ITEM.getId(stack.getItem()).toString());
+        sb.append(components.toString());
+        return sb.toString();
     }
 
     private static String getEnchantedBookName(ItemStack stack) {
