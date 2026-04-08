@@ -4,7 +4,7 @@
     "version": "${version}",
     "name": "Copy Item Name",
     "description": "Middle-click items in inventory to copy their English name to clipboard.",
-    "authors": ["s925s"],
+    "authors": ["cUDGk"],
     "contact": {},
     "license": "MIT",
     "icon": "assets/copyitemname/icon.png",
