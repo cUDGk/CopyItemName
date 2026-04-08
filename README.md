@@ -62,13 +62,13 @@
 ## Installation
 
 1. [Fabric Loader](https://fabricmc.net/use/) をインストール
-2. [`copy-item-name-1.0.0.jar`](https://github.com/s925s/CopyItemName/releases/download/v1.0.0/copy-item-name-1.0.0.jar) をダウンロード
+2. [`copy-item-name-1.0.0.jar`](https://github.com/cUDGk/CopyItemName/releases/download/v1.0.0/copy-item-name-1.0.0.jar) をダウンロード
 3. `.minecraft/mods/` に配置して起動
 
 ### ビルドする場合
 
 ```bash
-git clone https://github.com/s925s/CopyItemName.git
+git clone https://github.com/cUDGk/CopyItemName.git
 cd CopyItemName
 ./gradlew build
 ```
