@@ -17,11 +17,11 @@
 
 </div>
 
-## Overview
+## 概要
 
 日本語環境でマイクラをプレイしていると、コマンドやWikiでアイテムの英語名が必要になる場面がよくあります。このModを入れておけば、インベントリを開いてミドルクリックするだけで英語名またはアイテムIDがクリップボードにコピーされます。
 
-## Features
+## 特徴
 
 | 機能 | 説明 |
 |:---:|---|
@@ -32,7 +32,7 @@
 | **アクションバー通知** | コピー完了時に画面下部にメッセージ表示 |
 | **設定永続化** | `config/copyitemname.json` に設定を自動保存 |
 
-## Demo
+## デモ
 
 ```
 [インベントリでダイヤモンドソードをミドルクリック]
@@ -51,7 +51,7 @@
 → クリップボード: "Sharpness V, Unbreaking III"
 ```
 
-## Requirements
+## 必要なもの
 
 - **Minecraft 1.21.11**
 - **[Fabric Loader](https://fabricmc.net/) 0.18.0+**
@@ -59,7 +59,7 @@
 - **Java 21**
 - [ModMenu](https://modrinth.com/mod/modmenu)（任意 — 設定画面用）
 
-## Installation
+## インストール
 
 1. [Fabric Loader](https://fabricmc.net/use/) をインストール
 2. [`copy-item-name-1.0.0.jar`](https://github.com/cUDGk/CopyItemName/releases/download/v1.0.0/copy-item-name-1.0.0.jar) をダウンロード
@@ -75,7 +75,7 @@ cd CopyItemName
 
 `build/libs/copy-item-name-1.0.0.jar` が生成されます。
 
-## Usage
+## 使い方
 
 1. ゲーム内でインベントリを開く（`E` キー）
 2. コピーしたいアイテムにカーソルを合わせる
@@ -92,7 +92,7 @@ ModMenu がインストールされている場合、`Mods` → `Copy Item Name`
 | **Item ID** | アイテムの名前空間ID | `minecraft:trident` |
 | **Component** | アイテムID + コンポーネントデータ | `minecraft:trident[enchantments={...}]` |
 
-## How It Works
+## 仕組み
 
 ```
 ミドルクリック検出 (Mixin)
@@ -111,6 +111,6 @@ ModMenu がインストールされている場合、`Mods` → `Copy Item Name`
 
 英語名の取得には、Minecraft のリソースパックに含まれる `en_us.json`（英語の翻訳ファイル）をリソースリロード時に読み込んで使用しています。日本語環境でも常に英語名を返せるのはこの仕組みのおかげです。
 
-## License
+## ライセンス
 
 [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) — 非商用目的での利用・改変・再配布が可能です。商用利用は禁止されています。
