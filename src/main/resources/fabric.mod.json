@@ -6,7 +6,7 @@
     "description": "Middle-click items in inventory to copy their English name to clipboard.",
     "authors": ["cUDGk"],
     "contact": {},
-    "license": "MIT",
+    "license": "PolyForm-Noncommercial-1.0.0",
     "icon": "assets/copyitemname/icon.png",
     "environment": "client",
     "entrypoints": {
